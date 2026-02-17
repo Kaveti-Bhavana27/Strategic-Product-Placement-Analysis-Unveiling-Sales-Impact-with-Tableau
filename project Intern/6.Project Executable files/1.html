@@ -1,0 +1,121 @@
+<!-- index.html -->
+<!-- templates/index.html -->
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALES - Analytics</title>
+    <!-- CSS and Font Links -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome v6 is used, so 'fa-brands' is the correct prefix for brand icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">SALES</a>
+
+            <!-- Navigation Links -->
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/about" class="">About</a></li>
+                <li><a href="/dashboard" class="">Dashboard</a></li>
+                <li><a href="/story" class="">Story</a></li>
+                <li><a href="/contact" class="">Contact</a></li>
+                <!-- This 'Get Started' button will appear only in the mobile nav menu -->
+                <li><a href="#" class="btn-get-started">Get Started</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle (Hamburger Icon) -->
+            <!-- This button is only visible on mobile, as per our CSS -->
+            <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============== START: YOUTUBE PROMO SECTION ============== -->
+        <section class="youtube-promo-section">
+            <!-- Remember to replace the href with your actual YouTube channel URL -->
+            <a href="https://www.youtube.com/@SuryanallamothuYT" class="youtube-promo-link" target="_blank" rel="noopener noreferrer" title="Subscribe to my YouTube Channel!">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Subscribe Developer Channel</span>
+            </a>
+        </section>
+        <!-- ============== END: YOUTUBE PROMO SECTION ============== -->
+
+        
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Strategic Product Placement Analysis</h1>
+        <p>We are team of talented Data Analytics</p>
+    </div>
+</section>
+
+    </main>
+
+    <!-- ============== START: TEAM LIST TABLE ============== -->
+    <section class="team-section">
+        <h2>Our Team</h2>
+        <table class="team-table">
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Team Leader</td>
+                    <td>Arja Raghuveer</td>
+                </tr>
+                <tr>
+                    <td>Team member / Developer</td>
+                    <td>Kaveti Bhavana</td>
+                </tr>
+                <tr>
+                    <td>Team member</td>
+                    <td>Joga Balaji</td>
+                </tr>
+                <tr>
+                    <td>Team member</td>
+                    <td>Kartheek</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- ============== END: TEAM LIST TABLE ============== -->
+
+    <footer>
+        <p>© 2025 Nallamothu Ayyappa Venkata Surya. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuToggleBtn = document.getElementById('mobile-menu-toggle');
+        const body = document.querySelector('body');
+        const menuIcon = menuToggleBtn.querySelector('i');
+
+        menuToggleBtn.addEventListener('click', () => {
+            // Toggles the 'nav-open' class on the body to show/hide the menu
+            body.classList.toggle('nav-open');
+
+            // Toggles the icon between hamburger and 'X' for better UX
+            if (body.classList.contains('nav-open')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>
